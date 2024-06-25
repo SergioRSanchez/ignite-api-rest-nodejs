@@ -8,6 +8,12 @@ const app = fastify()
 
 app.register(cookie)
 
+// GLOBAL HOOK THAT WORKS IN ALL ROUTES
+// HOOK GLOBAL QUE FUNCIONA EM TODAS AS ROTAS
+// app.addHook('preHandler', async (request) => {
+//   console.log(`[${request.method}] ${request.url}`)
+// })
+
 app.register(transactionsRoutes, {
   prefix: 'transactions',
 })

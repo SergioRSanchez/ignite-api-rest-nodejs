@@ -6,6 +6,12 @@ import { knex } from '../database'
 import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
 export async function transactionsRoutes(app: FastifyInstance) {
+  // GLOBAL HOOK THAT ONLY WORKS IN THIS SPECIFIC PLUGIN
+  // HOOK GLOBAL QUE SÓ FUNCIONA NESSE PLUGIN ESPECÍFICO
+  // app.addHook('preHandler', async (request) => {
+  //   console.log(`[${request.method}] ${request.url}`)
+  // })
+
   app.get(
     '/',
     {
