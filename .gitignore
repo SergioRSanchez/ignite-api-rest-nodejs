@@ -145,7 +145,10 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 
-db/app.db
-db/test.db
+# Database
+db/*.db
+
+# Build
+build
 
 README.md
